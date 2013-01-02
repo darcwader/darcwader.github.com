@@ -72,7 +72,7 @@ That's it.
 
 I have created a sample github repo with a sample app. check it out.
 
-!(BumpApp Github ProjectPage)[https://github.com/darcwader/BumpApp]
+[BumpApp Github ProjectPage](https://github.com/darcwader/BumpApp)
 
 
 
