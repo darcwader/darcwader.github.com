@@ -5,6 +5,7 @@ date: 2012-12-24 13:47
 comments: true
 external-url: 
 categories: [Programming]
+published: false
 ---
 
 There are a lot of backend services available, with Parse as one of the more popular ones. Windows azure also provides a good BaaS. Stackmob though directly provies integration with Core Data which makes development a whole lot faster and easier.
