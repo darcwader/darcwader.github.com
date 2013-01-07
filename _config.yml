@@ -2,7 +2,7 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://darcwader.github.com
+url: http://darshansonde.in
 title: Darshan Sonde
 subtitle: 
 author: Darshan Sonde
@@ -93,7 +93,7 @@ disqus_short_name: darshansonde
 disqus_show_comment_count: false
 
 # Google Analytics
-google_analytics_tracking_id:
+google_analytics_tracking_id: UA-37371968-1
 
 # Facebook Like
 facebook_like: false
