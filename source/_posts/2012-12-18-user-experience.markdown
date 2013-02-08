@@ -4,7 +4,7 @@ title: "User Experience and Native Apps"
 date: 2012-12-18 15:32
 comments: true
 external-url: 
-categories: [Essay] 
+categories: [ios]
 ---
 
 ## Web Trends

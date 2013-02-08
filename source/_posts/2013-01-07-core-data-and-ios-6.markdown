@@ -3,7 +3,7 @@ layout: post
 title: "Core Data and iOS 6"
 date: 2013-01-07 23:17
 comments: true
-categories: 
+categories: [programming, ios]
 ---
 
 Core data is one of the technologies which elevates the performance and forms an essential part of any iOS app. 
@@ -17,6 +17,8 @@ Core data is one of the technologies which elevates the performance and forms an
 * Undo - easily undo grouped changes
 
 ### Basics
+
+{% img /images/posts/2013-01-07/stack.png 'stack' %}
 
 * Persistent Store
 

@@ -3,7 +3,7 @@ layout: post
 title: "Integrating Bump API in iOS"
 date: 2012-11-21 15:36
 comments: true
-categories: [programming, iphone]
+categories: [programming, ios]
 ---
 
 Stop waiting for NFC to pickup, coz its not. with the announcement of iPhone 5 and iOS 6 passbook, Apple has made it clear they are not interested in NFC. which means we need to find alternative solutions for iPhone. Bump which transfers contacts between two phones just by bumping them together has an API. below are the steps to integrate that into your app.
