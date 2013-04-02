@@ -3,7 +3,7 @@ layout: post
 title: "ruby"
 date: 2013-02-03 10:05
 comments: true
-categories: ['Code']
+categories: ['code']
 ---
 
 ## Why Ruby?
