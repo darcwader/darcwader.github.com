@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="//gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.55.6" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Git FAQ for Pull Request &middot; Darshan Sonde</title>
+
+  
+  <link type="text/css" rel="stylesheet" href="http://darshansonde.com/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="http://darshansonde.com/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="http://darshansonde.com/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="http://darshansonde.com/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://darshansonde.com/"><h1>Darshan Sonde</h1></a>
+      <p class="lead">
+       Yet Another Geek Blog. Possibly abandoned ramblings for my future self 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="http://darshansonde.com/">Home</a> </li>
+        
+      </ul>
+    </nav>
+
+    <p>&copy; 2019. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Git FAQ for Pull Request</h1>
+  <time datetime=2013-04-02T15:29:04&#43;0530 class="post-date">Tue, Apr 2, 2013</time>
+  
+
+<p>Git is a filesystem. It is not a cool thing anymore and has become a necessity to understand and get a good hold on using <code>Git</code>. Here are the steps to understand the pull request model.</p>
+
+<h2 id="basic-structure-of-pull-request-mode">Basic structure of Pull Request mode</h2>
+
+<p>{% img /images/posts/2013-04-02/pull-request-structure.png %}</p>
+
+<h2 id="which-repository-do-i-clone">Which repository do I clone?</h2>
+
+<p>As you can only commit to your own repository. It is best to clone from your repo. After cloning setup your</p>
+
+<pre><code>git clone &lt;myrepositoryurl&gt; &lt;folder&gt;
+git remote add upstream &lt;upstreamurl&gt;
+</code></pre>
+
+<h3 id="head-master-and-other-things">HEAD, master and other things</h3>
+
+<p>Git is more like a linked list. with different pointers.</p>
+
+<ul>
+<li><code>master</code> is a pointer in local repository.</li>
+<li><code>origin/master</code> is a pointer for master branch to remote named origin.</li>
+<li><code>upstream/master</code> is a pointer to main master</li>
+</ul>
+
+<h2 id="how-do-i-add-new-remote">How do I add new remote?</h2>
+
+<p>every machine is a remote. if you clone from github repository then that repository is one remote.  by default the repository you clone from is added as <code>origin</code>.</p>
+
+<pre><code>git remote -v
+git remote add &lt;name&gt; &lt;url&gt;
+git remote rename &lt;oldname&gt; &lt;newname&gt;
+</code></pre>
+
+<p>if you are setting up a fork. usually you will have 2 remotes. by convention your repo will be named <code>origin</code> and the main repo will be named <code>upstream</code>.</p>
+
+<h2 id="what-is-the-difference-between-master-and-origin-master-and-upstream-master">What is the difference between master and origin/master and upstream/master?</h2>
+
+<p>Any other repostitory for git is treated as <code>remote</code>. If you clone from a url , by default that url would be added as <code>origin</code>.</p>
+
+<p>master is local branch and same branch exists in server. its pointer shows <code>origin/master</code>.</p>
+
+<p><code>git pull origin master</code> is actually two commands</p>
+
+<pre><code>git fetch origin
+git merge origin/master
+</code></pre>
+
+<p><code>fetch</code> would synchronize all pointers of remote. if someone committed to origin/master then our origin/master would move up but master would not.
+<code>merge</code> would add our code into origin/master.</p>
+
+<p>same applies to upstream</p>
+
+<pre><code>git fetch upstream
+git merge upstream/master
+</code></pre>
+
+<h2 id="how-do-i-pull-latest-changes-from-main-repository">How do I pull latest changes from main repository</h2>
+
+<pre><code>git fetch upstream
+git merge upstream/master
+</code></pre>
+
+<h2 id="how-do-i-get-a-ongoing-feature-from-a-colleague">How do I get a ongoing feature from a colleague</h2>
+
+<p>Lets say your colleague is <em>bill</em> and you want his changes into your feature branch <em>feature-x</em></p>
+
+<ol>
+<li>first add your colleague&rsquo;s repository as a remote</li>
+<li>get his branch code into your feature branch</li>
+</ol>
+
+<p>current branch is feature-x</p>
+
+<pre><code>git remote add bill  &lt;billremote&gt;  
+git fetch bill
+git merge bill/change-branch-name
+git push origin feature-x:feature-x
+</code></pre>
+
+<p>now <code>feature-x</code> has bill&rsquo;s changes.  once complete create a pull request from this branch.</p>
+
+<h2 id="what-all-should-be-included-in-each-pull-request">What all should be included in each pull request?</h2>
+
+<p>Goto the website and click pull-request and choose the branch from which it has to be created.</p>
+
+<p>General Guideline</p>
+
+<ul>
+<li>Each pull request should be one feature</li>
+<li>Pull request should have complete shippable</li>
+<li>Try to create different branch for each new feature</li>
+</ul>
+
+<h2 id="i-messed-up-can-i-start-over">I messed up, can I start over?</h2>
+
+<p>Two ways to handle a messed up pull request</p>
+
+<ol>
+<li>Just start from scratch and create a new one</li>
+<li>Create a new commit fixing the issues and send another pull request. Older one automatically gets updated.</li>
+</ol>
+
+<h2 id="how-to-change-branch-of-already-added-commits">How to change branch of already added commits ?</h2>
+
+<p>lets assume your commits are in <code>master</code> and you want 2 commits to goto <code>new-branch</code></p>
+
+<pre><code>git checkout master
+git branch new-branch
+git reset --hard HEAD~2     or git reset --hard &lt;sha&gt;
+git checkout new-branch
+</code></pre>
+
+<h2 id="how-do-i-delete-a-branch-after-finishing-development">How do I delete a branch after finishing development?</h2>
+
+<pre><code>git branch -d done-feature
+git push origin :done-feature
+</code></pre>
+
+<h2 id="references">References</h2>
+
+<ul>
+<li><a href="http://git-scm.com/book/en">Git Scm Book</a></li>
+</ul>
+
+</div>
+
+<h2>Comments</h2>
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "darshansonde" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </main>
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-37371968-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  </body>
+</html>

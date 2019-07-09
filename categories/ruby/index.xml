@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ruby on Darshan Sonde</title>
+    <link>http://darshansonde.com/categories/ruby/</link>
+    <description>Recent content in Ruby on Darshan Sonde</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 25 May 2013 17:44:04 +0530</lastBuildDate>
+    
+	<atom:link href="http://darshansonde.com/categories/ruby/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fun with Ruby</title>
+      <link>http://darshansonde.com/archive/2013-05-25-fun-with-ruby/</link>
+      <pubDate>Sat, 25 May 2013 17:44:04 +0530</pubDate>
+      
+      <guid>http://darshansonde.com/archive/2013-05-25-fun-with-ruby/</guid>
+      <description>I am lazy and hate using the mouse. So I decided to use ruby to pull my techcrunch news for me. I just started learning ruby so don&amp;rsquo;t start sending me hate mails if this is too lame for you.
+Aim screenscrape a webpage and extract some information
+Gems First we need a way to fetch the webpage. the best one i found was &amp;lsquo;Rest-Client&amp;rsquo;. it has a very easy interface to get any webpage</description>
+    </item>
+    
+  </channel>
+</rss>

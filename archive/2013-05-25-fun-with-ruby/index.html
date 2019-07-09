@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Yet Another Start &middot; Darshan Sonde</title>
+  <title>Fun with Ruby &middot; Darshan Sonde</title>
 
   
   <link type="text/css" rel="stylesheet" href="http://darshansonde.com/css/print.css" media="print">
@@ -49,21 +49,102 @@
 
     <main class="content container">
     <div class="post">
-  <h1>Yet Another Start</h1>
-  <time datetime=2019-07-08T21:58:04&#43;0530 class="post-date">Mon, Jul 8, 2019</time>
-  <p>Hello my future self!</p>
+  <h1>Fun with Ruby</h1>
+  <time datetime=2013-05-25T17:44:04&#43;0530 class="post-date">Sat, May 25, 2013</time>
+  
 
-<p>I hope the last post is not more than 1 year old. atleast try to write someting on every jan 1.</p>
+<p>I am lazy and hate using the mouse. So I decided to use ruby to pull my techcrunch news for me.
+I just started learning ruby so don&rsquo;t start sending me hate mails if this is too lame for you.</p>
 
-<p>I had jekyll site, then moved to docuwiki. now seeing that both serve very different purposes, i thought why not start yet again to write in a blog format.</p>
+<h2 id="aim">Aim</h2>
 
-<p>after all, having strict deadlines did help me write about 1 article last time.</p>
+<p>screenscrape a webpage and extract some information</p>
 
-<p>would this develop into a full fledged habit&hellip; unlikely.</p>
+<h2 id="gems">Gems</h2>
 
-<p>would i have fun trying to start someting new&hellip; definitely.</p>
+<p>First we need a way to fetch the webpage. the best one i found was &lsquo;Rest-Client&rsquo;. it has a very easy interface to get any webpage</p>
 
-<p>lets go!</p>
+<pre><code>gem install 'rest-client'
+
+irb
+require 'rest-client'
+response = RestClient.get &quot;http://techcrunch.com&quot;
+</code></pre>
+
+<p>Once I got the response, I need a way to parse the response which is html. &lsquo;Nokogiri&rsquo; was a good one.</p>
+
+<p>Nokogiri documentation gives this example.</p>
+
+<pre><code>doc = Nokogiri::HTML(open('http://www.google.com/search?q=sparklemotion'))
+
+doc.css('h3.r a').each do |link|
+puts link.content
+end
+</code></pre>
+
+<h3 id="script">Script</h3>
+
+<p>so lets get started</p>
+
+<ul>
+<li>Get the techcruch page</li>
+<li>Process to get all headlines</li>
+
+<li><p>Print the headlines</p>
+
+<pre><code>require 'rest-client'
+require 'Nokogiri'
+
+response = RestClient.get &quot;http://techcrunch.com&quot;
+html = Nokogiri::HTML(response)
+
+html.css(&quot;h2.headline&quot;).each do |headline|
+puts headline
+end
+</code></pre></li>
+</ul>
+
+<p>If you say, why not just use RSS? I Would say the title of this article is &lsquo;Fun with ruby&rsquo; not &lsquo;Dummmies guide to RSS&rsquo;.</p>
+
+<h2 id="watir">Watir</h2>
+
+<p>All is good. but what if I have to login and then start to extract information. It might get tricky.</p>
+
+<p>Then comes (Watir)[<a href="http://watir.com/">http://watir.com/</a>] it is an amazing automation tool. you can launch a browser and control it through ruby, it is based on selenium.</p>
+
+<p>The steps now would be</p>
+
+<ul>
+<li>Launch Watir browser and login</li>
+
+<li><p>Start scraping the information</p>
+
+<pre><code>require 'watir-webdriver'
+browser = Watir::Browsser.new
+
+browser.goto &quot;http://techcrunch.com&quot;
+html = browser.html
+
+</code></pre></li>
+</ul>
+
+<p>use this html to parse same way as before.</p>
+
+<h2 id="screenshot">Screenshot</h2>
+
+<p>If you would want to take a screenshot you can</p>
+
+<pre><code>browser.screenshot.save &quot;screenshot.png&quot;
+</code></pre>
+
+<h2 id="whats-the-use">Whats the use?</h2>
+
+<p>Well , If you are irritated with JIRA maybe you can write a program to log your hours easily.
+Maybe you want to spam someones facebook wall.
+Send gazillion mails to your ex.
+Try to download entire internet onto your maching.</p>
+
+<p>go figure!</p>
 
 </div>
 

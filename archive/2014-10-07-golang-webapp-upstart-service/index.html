@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Yet Another Start &middot; Darshan Sonde</title>
+  <title>Golang WebApp Upstart Service &middot; Darshan Sonde</title>
 
   
   <link type="text/css" rel="stylesheet" href="http://darshansonde.com/css/print.css" media="print">
@@ -49,21 +49,47 @@
 
     <main class="content container">
     <div class="post">
-  <h1>Yet Another Start</h1>
-  <time datetime=2019-07-08T21:58:04&#43;0530 class="post-date">Mon, Jul 8, 2019</time>
-  <p>Hello my future self!</p>
+  <h1>Golang WebApp Upstart Service</h1>
+  <time datetime=2014-10-07T20:24:04&#43;0530 class="post-date">Tue, Oct 7, 2014</time>
+  
 
-<p>I hope the last post is not more than 1 year old. atleast try to write someting on every jan 1.</p>
+<p>I am running a small webapp and wanted a small service to restart the webapp on boot. There are lot of scripts and tutorials out there, but the solution turned out to be pretty simple.</p>
 
-<p>I had jekyll site, then moved to docuwiki. now seeing that both serve very different purposes, i thought why not start yet again to write in a blog format.</p>
+<p>the webapp binary is upn.</p>
 
-<p>after all, having strict deadlines did help me write about 1 article last time.</p>
+<pre><code class="language-bash"># upnworld - upn job file
 
-<p>would this develop into a full fledged habit&hellip; unlikely.</p>
+description &quot;upnworld.com  server&quot;
+author &quot;Darshan Sonde&lt;darshan.sonde@gmail.com&gt;&quot;
 
-<p>would i have fun trying to start someting new&hellip; definitely.</p>
+start on starting mysql
+stop on shutdown
 
-<p>lets go!</p>
+chdir /home/darshansonde/go/bin
+exec /home/darshansonde/go/bin/upn 2&gt;&amp;1 &gt;/var/log/upn.log
+</code></pre>
+
+<p>to start service</p>
+
+<pre><code class="language-bash">initctl start upn
+</code></pre>
+
+<p>to stop service</p>
+
+<pre><code class="language-bash">initctl stop upn
+</code></pre>
+
+<p>to restart service</p>
+
+<pre><code class="language-bash">initctl restart upn
+</code></pre>
+
+<h2 id="references">References</h2>
+
+<ol>
+<li><a href="http://upstart.ubuntu.com/cookbook/">Upstart Cookbook</a></li>
+<li><a href="http://upstart.ubuntu.com/getting-started.html">Upstart Getting Started</a></li>
+</ol>
 
 </div>
 

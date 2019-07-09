@@ -1,28 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Darshan Sonde</title>
-    <link>http://darshansonde.com/</link>
-    <description>Recent content on Darshan Sonde</description>
+    <title>Archives on Darshan Sonde</title>
+    <link>http://darshansonde.com/archive/</link>
+    <description>Recent content in Archives on Darshan Sonde</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 08 Jul 2019 21:58:04 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 07 Oct 2014 20:24:04 +0530</lastBuildDate>
     
-	<atom:link href="http://darshansonde.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://darshansonde.com/archive/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Yet Another Start</title>
-      <link>http://darshansonde.com/posts/yet-another-start/</link>
-      <pubDate>Mon, 08 Jul 2019 21:58:04 +0530</pubDate>
-      
-      <guid>http://darshansonde.com/posts/yet-another-start/</guid>
-      <description>Hello my future self!
-I hope the last post is not more than 1 year old. atleast try to write someting on every jan 1.
-I had jekyll site, then moved to docuwiki. now seeing that both serve very different purposes, i thought why not start yet again to write in a blog format.
-after all, having strict deadlines did help me write about 1 article last time.
-would this develop into a full fledged habit&amp;hellip; unlikely.</description>
-    </item>
     
     <item>
       <title>Golang WebApp Upstart Service</title>

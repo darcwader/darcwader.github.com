@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="//gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.55.6" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Integrating Bump API in iOS &middot; Darshan Sonde</title>
+
+  
+  <link type="text/css" rel="stylesheet" href="http://darshansonde.com/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="http://darshansonde.com/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="http://darshansonde.com/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="http://darshansonde.com/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://darshansonde.com/"><h1>Darshan Sonde</h1></a>
+      <p class="lead">
+       Yet Another Geek Blog. Possibly abandoned ramblings for my future self 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="http://darshansonde.com/">Home</a> </li>
+        
+      </ul>
+    </nav>
+
+    <p>&copy; 2019. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Integrating Bump API in iOS</h1>
+  <time datetime=2012-11-21T15:36:04&#43;0530 class="post-date">Wed, Nov 21, 2012</time>
+  <p>Stop waiting for NFC to pickup, coz its not. with the announcement of iPhone 5 and iOS 6 passbook, Apple has made it clear they are not interested in NFC. which means we need to find alternative solutions for iPhone. Bump which transfers contacts between two phones just by bumping them together has an API. below are the steps to integrate that into your app.</p>
+
+<p>Download the api from</p>
+
+<blockquote>
+<p><a href="https://github.com/bumptech/bump-api-ios.git">https://github.com/bumptech/bump-api-ios.git</a></p>
+</blockquote>
+
+<p>now to integrate it it just takes two steps</p>
+
+<ol>
+<li>add the lib and .h into your project</li>
+<li>include CFNetwork, Core Location</li>
+</ol>
+
+<p>that&rsquo;s it.</p>
+
+<p>the basic sample mentioned by bump is as good as it gets.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-objc" data-lang="objc">- (<span style="color:#66d9ef">void</span>) <span style="color:#a6e22e">configureBump</span> {
+    [BumpClient configureWithAPIKey:<span style="color:#e6db74">@&#34;b8283fabcf1345559951c466d387432c&#34;</span> andUserID:[[UIDevice currentDevice] name]];
+
+    [[BumpClient sharedClient] setMatchBlock:<span style="color:#f92672">^</span>(BumpChannelID channel) { 
+        NSLog(<span style="color:#e6db74">@&#34;Matched with user: %@&#34;</span>, [[BumpClient sharedClient] userIDForChannel:channel]); 
+        [[BumpClient sharedClient] confirmMatch:YES onChannel:channel];
+    }];
+
+    [[BumpClient sharedClient] setChannelConfirmedBlock:<span style="color:#f92672">^</span>(BumpChannelID channel) {
+        NSLog(<span style="color:#e6db74">@&#34;Channel with %@ confirmed.&#34;</span>, [[BumpClient sharedClient] userIDForChannel:channel]);
+        [[BumpClient sharedClient] sendData:[[NSString stringWithFormat:<span style="color:#e6db74">@&#34;Hello, world!&#34;</span>] dataUsingEncoding:NSUTF8StringEncoding]
+            toChannel:channel];
+    }];
+
+    [[BumpClient sharedClient] setDataReceivedBlock:<span style="color:#f92672">^</span>(BumpChannelID channel, NSData <span style="color:#f92672">*</span>data) {
+        NSLog(<span style="color:#e6db74">@&#34;Data received from %@: %@&#34;</span>, 
+                [[BumpClient sharedClient] userIDForChannel:channel], 
+                [NSString stringWithCString:[data bytes] encoding:NSUTF8StringEncoding]);
+    }];
+
+    [[BumpClient sharedClient] setConnectionStateChangedBlock:<span style="color:#f92672">^</span>(<span style="color:#66d9ef">BOOL</span> connected) {
+        <span style="color:#66d9ef">if</span> (connected) {
+            NSLog(<span style="color:#e6db74">@&#34;Bump connected...&#34;</span>);
+        } <span style="color:#66d9ef">else</span> {
+            NSLog(<span style="color:#e6db74">@&#34;Bump disconnected...&#34;</span>);
+        }
+    }];
+
+    [[BumpClient sharedClient] setBumpEventBlock:<span style="color:#f92672">^</span>(bump_event event) {
+        <span style="color:#66d9ef">switch</span>(event) {
+            <span style="color:#66d9ef">case</span> BUMP_EVENT_BUMP:
+                NSLog(<span style="color:#e6db74">@&#34;Bump detected.&#34;</span>);
+                <span style="color:#66d9ef">break</span>;
+            <span style="color:#66d9ef">case</span> BUMP_EVENT_NO_MATCH:
+                NSLog(<span style="color:#e6db74">@&#34;No match.&#34;</span>);
+                <span style="color:#66d9ef">break</span>;
+        }
+    }];
+}</code></pre></div>
+
+<p>You just need to understand the basic usage of this. Inorder to use the API&rsquo;s your device needs to be connected to Bump. Once each device is connected to bump, say DeviceA and DeviceB then both of them need to bump together. if they simultaneously bump together, the bump api will match its location and establish a connection. Once connected any one device may send data to the other.</p>
+
+<p>That&rsquo;s it.</p>
+
+<p>I have created a sample github repo with a sample app. check it out.</p>
+
+<p><a href="https://github.com/darcwader/BumpApp">BumpApp Github ProjectPage</a></p>
+
+</div>
+
+<h2>Comments</h2>
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "darshansonde" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </main>
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-37371968-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  </body>
+</html>

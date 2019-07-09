@@ -58,11 +58,125 @@
   Hello my future self!
 I hope the last post is not more than 1 year old. atleast try to write someting on every jan 1.
 I had jekyll site, then moved to docuwiki. now seeing that both serve very different purposes, i thought why not start yet again to write in a blog format.
-after all, having strict deadlines did help me write about 5 articles.
+after all, having strict deadlines did help me write about 1 article last time.
 would this develop into a full fledged habit&hellip; unlikely.
   
   <div class="read-more-link">
     <a href="/posts/yet-another-start/">Read More…</a>
+  </div>
+  
+</article><article class="post">
+  <h1 class="post-title">
+    <a href="http://darshansonde.com/archive/2014-10-07-golang-webapp-upstart-service/">Golang WebApp Upstart Service</a>
+  </h1>
+  <time datetime="2014-10-07T20:24:04&#43;0530" class="post-date">Tue, Oct 7, 2014</time>
+  I am running a small webapp and wanted a small service to restart the webapp on boot. There are lot of scripts and tutorials out there, but the solution turned out to be pretty simple.
+the webapp binary is upn.
+# upnworld - upn job file description &quot;upnworld.com server&quot; author &quot;Darshan Sonde&lt;darshan.sonde@gmail.com&gt;&quot; start on starting mysql stop on shutdown chdir /home/darshansonde/go/bin exec /home/darshansonde/go/bin/upn 2&gt;&amp;1 &gt;/var/log/upn.log  to start service
+  
+  <div class="read-more-link">
+    <a href="/archive/2014-10-07-golang-webapp-upstart-service/">Read More…</a>
+  </div>
+  
+</article><article class="post">
+  <h1 class="post-title">
+    <a href="http://darshansonde.com/archive/2013-05-25-fun-with-ruby/">Fun with Ruby</a>
+  </h1>
+  <time datetime="2013-05-25T17:44:04&#43;0530" class="post-date">Sat, May 25, 2013</time>
+  I am lazy and hate using the mouse. So I decided to use ruby to pull my techcrunch news for me. I just started learning ruby so don&rsquo;t start sending me hate mails if this is too lame for you.
+Aim screenscrape a webpage and extract some information
+Gems First we need a way to fetch the webpage. the best one i found was &lsquo;Rest-Client&rsquo;. it has a very easy interface to get any webpage
+  
+  <div class="read-more-link">
+    <a href="/archive/2013-05-25-fun-with-ruby/">Read More…</a>
+  </div>
+  
+</article><article class="post">
+  <h1 class="post-title">
+    <a href="http://darshansonde.com/archive/2013-04-02-git-faq-for-pull-request/">Git FAQ for Pull Request</a>
+  </h1>
+  <time datetime="2013-04-02T15:29:04&#43;0530" class="post-date">Tue, Apr 2, 2013</time>
+  Git is a filesystem. It is not a cool thing anymore and has become a necessity to understand and get a good hold on using Git. Here are the steps to understand the pull request model.
+Basic structure of Pull Request mode {% img /images/posts/2013-04-02/pull-request-structure.png %}
+Which repository do I clone? As you can only commit to your own repository. It is best to clone from your repo. After cloning setup your
+  
+  <div class="read-more-link">
+    <a href="/archive/2013-04-02-git-faq-for-pull-request/">Read More…</a>
+  </div>
+  
+</article><article class="post">
+  <h1 class="post-title">
+    <a href="http://darshansonde.com/archive/2013-02-12-parallel-image-download/">Parallel Image Download</a>
+  </h1>
+  <time datetime="2013-02-12T11:08:04&#43;0530" class="post-date">Tue, Feb 12, 2013</time>
+  Photo download is one of the most common feature in iPhone app. Just as Download Manager speeds up due image downloads, we can speed up the image download using multiple requests.
+Is it really gonna speed up the download ? Usually single large image loads take considerable time due two 2 factors.
+ Server bandwidth - the bandwidth might be fixed bandwidth for each request Client bandwidth - the speed of internet connection  Client bandwidth&rsquo;s effective utilization requires carefully crafted architecture in backend and front end.
+  
+  <div class="read-more-link">
+    <a href="/archive/2013-02-12-parallel-image-download/">Read More…</a>
+  </div>
+  
+</article><article class="post">
+  <h1 class="post-title">
+    <a href="http://darshansonde.com/archive/2013-02-03-ruby/">ruby</a>
+  </h1>
+  <time datetime="2013-02-03T10:05:04&#43;0530" class="post-date">Sun, Feb 3, 2013</time>
+  Why Ruby? shipping your product is single most important thing and you should do it as FAST as possible. I think ruby is right now the fastest way.
+Installing Ruby with rbenv Install rbenv cd git clone git://github.com/sstephenson/rbenv.git .rbenv echo 'export PATH=&quot;$HOME/.rbenv/bin:$PATH&quot;' &gt;&gt; ~/.bash_profile echo 'eval &quot;$(rbenv init -)&quot;' &gt;&gt; ~/.bash_profile git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build source ~/.bash_profile  Searching for ruby version rbenv install --list  Install ruby rbenv install 1.
+  
+  <div class="read-more-link">
+    <a href="/archive/2013-02-03-ruby/">Read More…</a>
+  </div>
+  
+</article><article class="post">
+  <h1 class="post-title">
+    <a href="http://darshansonde.com/archive/2013-01-07-core-data-and-ios-6/">Core Data and iOS 6</a>
+  </h1>
+  <time datetime="2013-01-07T23:17:04&#43;0530" class="post-date">Mon, Jan 7, 2013</time>
+  Core data is one of the technologies which elevates the performance and forms an essential part of any iOS app.
+Advantages  Performance - easy to fine tune. Model - often overlooked core data awesomeness. a model ties together the data and the view, which gives better consistency while dealing with webservices. Faults - efficient usage of memory . loads only the necessary content. Caching - uniform way to fetch different kinds of data offline.
+  
+  <div class="read-more-link">
+    <a href="/archive/2013-01-07-core-data-and-ios-6/">Read More…</a>
+  </div>
+  
+</article><article class="post">
+  <h1 class="post-title">
+    <a href="http://darshansonde.com/archive/2012-12-18-user-experience/">User Experience and Native Apps</a>
+  </h1>
+  <time datetime="2012-12-18T15:32:04&#43;0530" class="post-date">Tue, Dec 18, 2012</time>
+  Web Trends Generally if you see the browser downloads. we see that last two years there is a gradual decline. Users are preferring to consume through mobile devices rather than browsers.
+  Google Browser Trends   Native Facebook released a new native iOS app which uses native controls instead of html5 controls. The user experience improvement was significant and even made zuckerberg admit it was a mistake not to go Native!
+  
+  <div class="read-more-link">
+    <a href="/archive/2012-12-18-user-experience/">Read More…</a>
+  </div>
+  
+</article><article class="post">
+  <h1 class="post-title">
+    <a href="http://darshansonde.com/archive/2012-11-21-integrating-bump-api/">Integrating Bump API in iOS</a>
+  </h1>
+  <time datetime="2012-11-21T15:36:04&#43;0530" class="post-date">Wed, Nov 21, 2012</time>
+  Stop waiting for NFC to pickup, coz its not. with the announcement of iPhone 5 and iOS 6 passbook, Apple has made it clear they are not interested in NFC. which means we need to find alternative solutions for iPhone. Bump which transfers contacts between two phones just by bumping them together has an API. below are the steps to integrate that into your app.
+Download the api from
+ https://github.
+  
+  <div class="read-more-link">
+    <a href="/archive/2012-11-21-integrating-bump-api/">Read More…</a>
+  </div>
+  
+</article><article class="post">
+  <h1 class="post-title">
+    <a href="http://darshansonde.com/archive/2012-11-12-writing-essays/">Writing Essays</a>
+  </h1>
+  <time datetime="2012-11-12T23:54:04&#43;0530" class="post-date">Mon, Nov 12, 2012</time>
+  The different between an educated person and an un-educated person doing a manual job is that the educated person writes his findings down so that the future educated men can read and learn from his knowledge. We have to keep in mind that History repeats itself and Everyone has a History.
+Understanding
+When searching for how to improve my writing, I came across an essay by Paul Graham in which he writes.
+  
+  <div class="read-more-link">
+    <a href="/archive/2012-11-12-writing-essays/">Read More…</a>
   </div>
   
 </article>

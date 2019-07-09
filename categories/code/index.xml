@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>code on Darshan Sonde</title>
+    <link>http://darshansonde.com/categories/code/</link>
+    <description>Recent content in code on Darshan Sonde</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 02 Apr 2013 15:29:04 +0530</lastBuildDate>
+    
+	<atom:link href="http://darshansonde.com/categories/code/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Git FAQ for Pull Request</title>
+      <link>http://darshansonde.com/archive/2013-04-02-git-faq-for-pull-request/</link>
+      <pubDate>Tue, 02 Apr 2013 15:29:04 +0530</pubDate>
+      
+      <guid>http://darshansonde.com/archive/2013-04-02-git-faq-for-pull-request/</guid>
+      <description>Git is a filesystem. It is not a cool thing anymore and has become a necessity to understand and get a good hold on using Git. Here are the steps to understand the pull request model.
+Basic structure of Pull Request mode {% img /images/posts/2013-04-02/pull-request-structure.png %}
+Which repository do I clone? As you can only commit to your own repository. It is best to clone from your repo. After cloning setup your</description>
+    </item>
+    
+    <item>
+      <title>ruby</title>
+      <link>http://darshansonde.com/archive/2013-02-03-ruby/</link>
+      <pubDate>Sun, 03 Feb 2013 10:05:04 +0530</pubDate>
+      
+      <guid>http://darshansonde.com/archive/2013-02-03-ruby/</guid>
+      <description>Why Ruby? shipping your product is single most important thing and you should do it as FAST as possible. I think ruby is right now the fastest way.
+Installing Ruby with rbenv Install rbenv cd git clone git://github.com/sstephenson/rbenv.git .rbenv echo &#39;export PATH=&amp;quot;$HOME/.rbenv/bin:$PATH&amp;quot;&#39; &amp;gt;&amp;gt; ~/.bash_profile echo &#39;eval &amp;quot;$(rbenv init -)&amp;quot;&#39; &amp;gt;&amp;gt; ~/.bash_profile git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build source ~/.bash_profile  Searching for ruby version rbenv install --list  Install ruby rbenv install 1.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ios on Darshan Sonde</title>
+    <link>http://darshansonde.com/categories/ios/</link>
+    <description>Recent content in ios on Darshan Sonde</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 12 Feb 2013 11:08:04 +0530</lastBuildDate>
+    
+	<atom:link href="http://darshansonde.com/categories/ios/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Parallel Image Download</title>
+      <link>http://darshansonde.com/archive/2013-02-12-parallel-image-download/</link>
+      <pubDate>Tue, 12 Feb 2013 11:08:04 +0530</pubDate>
+      
+      <guid>http://darshansonde.com/archive/2013-02-12-parallel-image-download/</guid>
+      <description>Photo download is one of the most common feature in iPhone app. Just as Download Manager speeds up due image downloads, we can speed up the image download using multiple requests.
+Is it really gonna speed up the download ? Usually single large image loads take considerable time due two 2 factors.
+ Server bandwidth - the bandwidth might be fixed bandwidth for each request Client bandwidth - the speed of internet connection  Client bandwidth&amp;rsquo;s effective utilization requires carefully crafted architecture in backend and front end.</description>
+    </item>
+    
+    <item>
+      <title>Core Data and iOS 6</title>
+      <link>http://darshansonde.com/archive/2013-01-07-core-data-and-ios-6/</link>
+      <pubDate>Mon, 07 Jan 2013 23:17:04 +0530</pubDate>
+      
+      <guid>http://darshansonde.com/archive/2013-01-07-core-data-and-ios-6/</guid>
+      <description>Core data is one of the technologies which elevates the performance and forms an essential part of any iOS app.
+Advantages  Performance - easy to fine tune. Model - often overlooked core data awesomeness. a model ties together the data and the view, which gives better consistency while dealing with webservices. Faults - efficient usage of memory . loads only the necessary content. Caching - uniform way to fetch different kinds of data offline.</description>
+    </item>
+    
+    <item>
+      <title>User Experience and Native Apps</title>
+      <link>http://darshansonde.com/archive/2012-12-18-user-experience/</link>
+      <pubDate>Tue, 18 Dec 2012 15:32:04 +0530</pubDate>
+      
+      <guid>http://darshansonde.com/archive/2012-12-18-user-experience/</guid>
+      <description>Web Trends Generally if you see the browser downloads. we see that last two years there is a gradual decline. Users are preferring to consume through mobile devices rather than browsers.
+  Google Browser Trends   Native Facebook released a new native iOS app which uses native controls instead of html5 controls. The user experience improvement was significant and even made zuckerberg admit it was a mistake not to go Native!</description>
+    </item>
+    
+    <item>
+      <title>Integrating Bump API in iOS</title>
+      <link>http://darshansonde.com/archive/2012-11-21-integrating-bump-api/</link>
+      <pubDate>Wed, 21 Nov 2012 15:36:04 +0530</pubDate>
+      
+      <guid>http://darshansonde.com/archive/2012-11-21-integrating-bump-api/</guid>
+      <description>Stop waiting for NFC to pickup, coz its not. with the announcement of iPhone 5 and iOS 6 passbook, Apple has made it clear they are not interested in NFC. which means we need to find alternative solutions for iPhone. Bump which transfers contacts between two phones just by bumping them together has an API. below are the steps to integrate that into your app.
+Download the api from
+ https://github.</description>
+    </item>
+    
+  </channel>
+</rss>
