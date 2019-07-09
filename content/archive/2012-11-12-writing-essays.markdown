@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "Writing Essays"
-date: 2012-11-12 23:54
+date: 2012-11-12T23:54:04+05:30
 comments: true
 categories: [thoughts]
 ---
@@ -12,9 +11,8 @@ The different between an educated person and an un-educated person doing a manua
 
 When searching for how to improve my writing, I came across an essay by Paul Graham in which he writes. 
 
-{% blockquote Paul Graham http://www.paulgraham.com/essay.html %}
-Essayer is the French verb meaning "to try" and an essai is an attempt. An essay is something you write to try to figure something out.
-{% endblockquote %}
+> Essayer is the French verb meaning "to try" and an essai is an attempt. An essay is something you write to try to figure something out. - [Paul Graham](http://www.paulgraham.com/essay.html)
+
 
 When thoughts are written down we connect things which we normally wouldn't. It helps consolidate and explore thoughts much similar to how we perform better under observation (Hawthorne effect). Somebody is staring at you while working, you will perform better. Except peeing, there we freeze.
 

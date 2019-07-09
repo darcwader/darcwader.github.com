@@ -1,9 +1,7 @@
 ---
-layout: post
 title: "User Experience and Native Apps"
-date: 2012-12-18 15:32
+date: 2012-12-18T15:32:04+05:30
 comments: true
-external-url: 
 categories: [ios]
 ---
 
@@ -11,7 +9,7 @@ categories: [ios]
 
 Generally if you see the browser downloads. we see that last two years there is a gradual decline. Users are preferring to consume through mobile devices rather than browsers.  
 
-{% img /images/posts/2012-12-18/trend.png "Google Browser Trends" %}
+{{< figure src="/images/posts/2012-12-18/trend.png" title="Google Browser Trends" >}}
 
 ## Native
 

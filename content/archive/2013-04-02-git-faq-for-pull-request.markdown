@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "Git FAQ for Pull Request"
-date: 2013-04-02 15:29
+date: 2013-04-02T15:29:04+05:30
 comments: true
 categories: [code]
 ---

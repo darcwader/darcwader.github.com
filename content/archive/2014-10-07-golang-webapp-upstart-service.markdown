@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "Golang WebApp Upstart Service"
-date: 2014-10-07 20:24:09 +0530
+date: 2014-10-07T20:24:04+05:30
 comments: true
 categories: programming, golang
 ---

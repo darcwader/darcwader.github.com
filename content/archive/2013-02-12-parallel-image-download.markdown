@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "Parallel Image Download"
-date: 2013-02-12 11:08
+date: 2013-02-12T11:08:04+05:30
 comments: true
 categories: [ios, programming]
 ---
@@ -75,7 +74,7 @@ NSMutableURLRequest *downloadRequest = [NSMutableURLRequest requestWithURL:imgur
 
 NSURL will cache response and return you the same data for first , second and third parts as it doesnt care about header length fields. So better disable the caching to avoid sleepless nights.
 
-``` objc
+{{< highlight objc >}}
 -(NSCachedURLResponse *)connection:(NSURLConnection *)connection
 
                  willCacheResponse:(NSCachedURLResponse *)cachedResponse
@@ -83,7 +82,7 @@ NSURL will cache response and return you the same data for first , second and th
 {
     return nil;
 }
-```
+{{< /highlight >}}
 
 All credit to Vivek Rajanna for this idea and implementation.
 

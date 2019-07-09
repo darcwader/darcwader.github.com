@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "ruby"
-date: 2013-02-03 10:05
+date: 2013-02-03T10:05:04+05:30
 comments: true
 categories: ['code']
 ---

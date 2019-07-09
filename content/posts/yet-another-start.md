@@ -12,10 +12,10 @@ I had jekyll site, then moved to docuwiki. now seeing that both serve very diffe
 
 
 
-after all, having strict deadlines did help me write about 5 articles.
+after all, having strict deadlines did help me write about 1 article last time.
 
 would this develop into a full fledged habit... unlikely.
 
-would i have fun trying to start someting new... definetly.
+would i have fun trying to start someting new... definitely.
 
 lets go!

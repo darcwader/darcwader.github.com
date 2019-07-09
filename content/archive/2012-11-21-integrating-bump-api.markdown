@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "Integrating Bump API in iOS"
-date: 2012-11-21 15:36
+date: 2012-11-21T15:36:04+05:30
 comments: true
 categories: [programming, ios]
 ---
@@ -10,9 +9,8 @@ Stop waiting for NFC to pickup, coz its not. with the announcement of iPhone 5 a
 
 
 Download the api from
-{% blockquote %}
-https://github.com/bumptech/bump-api-ios.git
-{% endblockquote %}
+
+> https://github.com/bumptech/bump-api-ios.git
 
 now to integrate it it just takes two steps
 
@@ -23,7 +21,7 @@ that's it.
 
 the basic sample mentioned by bump is as good as it gets.
 
-{% codeblock lang:objc %}
+{{< highlight objc >}}
 - (void) configureBump {
     [BumpClient configureWithAPIKey:@"b8283fabcf1345559951c466d387432c" andUserID:[[UIDevice currentDevice] name]];
 
@@ -63,7 +61,7 @@ the basic sample mentioned by bump is as good as it gets.
         }
     }];
 }
-{% endcodeblock %}
+{{< /highlight >}}
 
 
 You just need to understand the basic usage of this. Inorder to use the API's your device needs to be connected to Bump. Once each device is connected to bump, say DeviceA and DeviceB then both of them need to bump together. if they simultaneously bump together, the bump api will match its location and establish a connection. Once connected any one device may send data to the other. 

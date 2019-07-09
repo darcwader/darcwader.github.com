@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "Fun with Ruby"
-date: 2013-05-25 17:44
+date: 2013-05-25T17:44:04+05:30
 comments: true
 categories: [ "Ruby" , "Programming" ]
 ---
