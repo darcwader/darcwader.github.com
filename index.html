@@ -203,6 +203,10 @@
 
     main { padding-top: 10px; }
 
+    #summary {
+      margin-bottom: 58px;
+    }
+
     section {
       margin-bottom: 84px;
       scroll-margin-top: 96px;
@@ -242,29 +246,6 @@
     }
 
     .body-copy strong { color: var(--text-primary); font-weight: 650; }
-
-    .executive-highlights {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-      margin-top: 8px;
-    }
-
-    .executive-highlight {
-      color: var(--text-secondary);
-      font-size: 13.5px;
-      line-height: 1.55;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 14px 16px;
-      background: rgba(17, 34, 64, 0.24);
-    }
-
-    .executive-highlight strong {
-      color: var(--text-primary);
-      font-weight: 700;
-    }
-
 
     .experience-item,
     .work-item,
@@ -432,7 +413,6 @@
       .experience-item, .work-item, .recognition-item { grid-template-columns: 1fr; gap: 8px; padding: 18px 0; border-radius: 0; border-left: 0; border-right: 0; border-top: 0; }
       .experience-item:hover, .work-item:hover, .recognition-item:hover { transform: none; background: transparent; box-shadow: none; }
       .impact-list { grid-template-columns: 1fr; }
-      .executive-highlights { grid-template-columns: 1fr; }
       .impact-list li { min-height: auto; }
       section { margin-bottom: 72px; }
       .contact-box { padding: 22px; }
@@ -450,24 +430,14 @@
 <div class="eyebrow">AI Systems Architect · Technology Innovator · Product Engineering Leader</div>
 <h1>Darshan Sonde</h1>
 <h2>AI Systems Architect, Technology Innovator &amp; Product Engineering Leader</h2>
-<p>Technology executive and systems architect with 18+ years of experience building large-scale products across artificial intelligence, fintech, insurance, enterprise software, and mobile platforms. Former Director of Technology and Head of Innovation at Y Media Labs, former Nokia platform engineer in Tampere, Finland, architect of the award-winning INSUREKA platform, and Founding Engineer behind HeyNoah.</p>
+<p>Technology executive and systems architect with 18+ years of experience across AI, enterprise software, insurance technology, and mobile platforms. Former Director of Technology and Head of Innovation at Y Media Labs, former Nokia platform engineer in Tampere, Finland, architect of INSUREKA, and Founding Engineer behind HeyNoah.</p>
 <div class="hero-highlights">
 <div class="hero-highlight"><strong>18+ Years</strong><span>Architecture &amp; engineering leadership</span></div>
 <div class="hero-highlight"><strong>AI &amp; ML</strong><span>Innovation labs, agents &amp; platforms</span></div>
 <div class="hero-highlight wide"><strong>Google · HeyNoah · INSUREKA</strong><span>Leadership, innovation &amp; award-winning platforms</span></div>
 </div>
-
 </div>
-<nav aria-label="Page navigation" class="nav">
-<a href="#about">About</a>
-<a href="#highlights">Highlights</a>
-<a href="#experience">Experience</a>
-<a href="#work">Selected Work</a>
-<a href="#impact">Impact</a>
-<a href="#recognition">Recognition</a>
-<a href="#writing">Writing</a>
-<a href="#contact">Contact</a>
-</nav>
+<nav aria-label="Page navigation" class="nav"><a href="#highlights">Highlights</a><a href="#experience">Experience</a><a href="#work">Selected Platforms</a><a href="#recognition">Recognition</a><a href="#writing">Writing</a><a href="#contact">Contact</a></nav>
 </div>
 <div class="socials">
 <a href="mailto:darshan@sonde.in">Email</a>
@@ -476,31 +446,30 @@
 </div>
 </aside>
 <main>
-<section id="about">
-<div class="section-label section-title">About</div>
+
+
+
+
+
+
+
+
+<section id="summary">
 <div class="body-copy">
 <p>Darshan Sonde is a technology leader and systems architect with more than <strong>18 years of experience</strong> spanning Nokia's platform engineering team in Tampere, Finland, leadership of Y Media Labs Innovation Labs, architecture of award-winning insurance technology platforms, and development of next-generation AI products.</p>
 <p>His work spans large-scale software architecture, machine learning, AI systems, enterprise platforms, and emerging technologies. Throughout his career, he has led innovation initiatives, built products from the ground up, and contributed to technology platforms serving users across international markets.</p>
 </div>
-</section>
-<section id="highlights">
+</section><section id="highlights">
 <div class="section-label">Highlights</div>
-<div class="executive-highlights">
-<div class="executive-highlight"><strong>Google Leadership Recommendation</strong></div>
-<div class="executive-highlight"><strong>Founding Engineer &amp; Lead Architect</strong> — HeyNoah</div>
-<div class="executive-highlight"><strong>Architect of Award-Winning INSUREKA Platform</strong></div>
-<div class="executive-highlight"><strong>Former Director of Technology &amp; Head of Innovation</strong> — Y Media Labs</div>
-<div class="executive-highlight"><strong>Nokia Platform Engineering</strong> — Tampere, Finland</div>
-</div>
-</section>
-<section id="experience">
+<ul class="impact-list"><li><strong>Google ML Collaboration</strong>, and leadership recommendation through Y Media Labs innovation work.</li><li><strong>HeyNoah Founding Engineer &amp; Lead Architect</strong>, responsible for core AI systems architecture and product engineering as part of the founding engineering team.</li><li><strong>INSUREKA Platform Architect</strong>, for the award-winning insurance technology platform recognized as Best Insurtech Platform of the Year 2022 in Indonesia.</li><li><strong>Y Media Labs Innovation Leadership</strong>, with earlier Nokia platform engineering experience in Tampere, Finland across foundational mobile technologies.</li></ul>
+</section><section id="experience">
 <div class="section-label">Experience</div>
 <article class="experience-item">
 <div class="years">2025 — Present</div>
 <div>
 <div class="role">Founding Engineer &amp; Lead Architect</div>
-<div class="company">Hey Noah</div>
-<div class="desc">Selected as a member of the core founding team responsible for architecting and building the HeyNoah AI platform. Worked directly with company leadership to design and implement complex AI systems, product infrastructure, and autonomous agent capabilities. Publicly recognized by founder Ashish Toshniwal as part of the small engineering team responsible for building and delivering the company's AI platform. Entrusted by the founder of Y Media Labs to build the technical foundation of the venture.</div>
+<div class="company">HeyNoah</div>
+<div class="desc">Selected as a member of the core founding team responsible for architecting and building the HeyNoah AI platform. Worked directly with company leadership to design and implement complex AI systems, product infrastructure, and autonomous agent capabilities. Publicly recognized by founder Ashish Toshniwal as a member of the core founding engineering team responsible for architecting and delivering the company's AI platform.</div>
 </div>
 </article>
 <article class="experience-item">
@@ -559,9 +528,8 @@
 <div class="desc">Maintained telecom billing applications, resolved production defects, and engaged with clients on new project opportunities.</div>
 </div>
 </article>
-</section>
-<section id="work">
-<div class="section-label">Selected Work</div>
+</section><section id="work">
+<div class="section-label">Selected Platforms</div>
 <article class="work-item">
 <div class="years">PhoneClaw</div>
 <div>
@@ -576,10 +544,10 @@
 </div>
 </article>
 <article class="work-item">
-<div class="years">Hey Noah</div>
+<div class="years">HeyNoah</div>
 <div>
-<div class="work-name">Hey Noah</div>
-<div class="work-desc">Core architecture, AI systems design, and end-to-end engineering for an AI-native startup platform. Entrusted by the founder of Y Media Labs to build the technical foundation of the venture.</div>
+<div class="work-name">HeyNoah</div>
+<div class="work-desc">Core architecture, AI systems design, and end-to-end engineering for an AI-native startup platform as part of the founding engineering team.</div>
 <div class="tags">
 <span class="tag">AI Startup</span>
 <span class="tag">System Architecture</span>
@@ -612,20 +580,8 @@
 </div>
 </div>
 </article>
-</section>
-<section id="impact">
-<div class="section-label">Impact</div>
-<ul class="impact-list">
-<li>Architect of <strong>INSUREKA</strong>, recognized as Best Insurtech Platform of the Year 2022 in Indonesia.</li>
-<li>Founding Engineer and Lead Architect behind <strong>HeyNoah</strong>, working directly with the founder of Y Media Labs to architect and build the company's AI platform.</li>
-<li>Founded and led <strong>Y Media Labs Innovation Labs</strong>, driving machine learning, AI, NLP, computer vision, and emerging technology initiatives.</li>
-<li>Collaborated with <strong>Google</strong> on machine learning initiatives and technology programs while leading innovation efforts at Y Media Labs.</li>
-<li>Contributed to <strong>Nokia's core platform engineering team</strong> in Tampere, Finland, helping build foundational technologies deployed across Nokia mobile devices worldwide.</li>
-<li>Built AI systems, enterprise platforms, mobile products, and innovation programs used across <strong>international markets</strong>.</li>
-</ul>
-</section>
-<section id="recognition">
-<div class="section-label">Recognition</div>
+</section><section id="recognition">
+<div class="section-label">Selected Recognition</div>
 <article class="recognition-item">
 <div class="years">Google</div>
 <div>
@@ -633,48 +589,42 @@
 <div class="recognition-desc">Received formal recognition and recommendation from Google leadership acknowledging technical innovation, engineering excellence, and contributions to machine learning initiatives while leading innovation programs at Y Media Labs. Collaborated on machine learning and TensorFlow Lite initiatives that contributed to strategic technology programs and business growth opportunities.</div>
 </div>
 </article>
-
-        <article class="recognition-item">
+<article class="recognition-item">
 <div class="years">HeyNoah</div>
 <div>
 <div class="recognition-title">Founding Team Recognition — HeyNoah</div>
 <div class="recognition-desc">Publicly recognized by HeyNoah founder Ashish Toshniwal as a member of the core engineering team responsible for building the company's AI platform and delivering complex AI systems at startup scale.</div>
 </div>
 </article>
-
-        <article class="recognition-item">
+<article class="recognition-item">
 <div class="years">Innovation</div>
 <div>
 <div class="recognition-title">Y Media Labs Innovation Leadership</div>
 <div class="recognition-desc">Founded and led the Y Media Labs Innovation Lab, overseeing advanced research and development initiatives across machine learning, AI, computer vision, NLP, and emerging technologies.</div>
 </div>
 </article>
-
-        <article class="recognition-item">
+<article class="recognition-item">
 <div class="years">Award</div>
 <div>
 <div class="recognition-title">Best Insurtech Platform of the Year 2022</div>
 <div class="recognition-desc">INSUREKA received national recognition as Best Insurtech Platform of the Year 2022 in Indonesia for its digital insurance innovation and platform architecture.</div>
 </div>
 </article>
-
-        <article class="recognition-item">
+<article class="recognition-item">
 <div class="years">Research</div>
 <div>
 <div class="recognition-title">Research Publication — United States</div>
 <div class="recognition-desc">Research paper accepted for publication in the United States, demonstrating ongoing technical contribution and innovation.</div>
 </div>
 </article>
-
-        <article class="recognition-item">
+<article class="recognition-item">
 <div class="years">Nokia</div>
 <div>
 <div class="recognition-title">Nokia Platform Engineering — Tampere, Finland</div>
 <div class="recognition-desc">Selected to join Nokia's core UI Framework engineering team in Tampere, Finland, contributing to platform architecture deployed across Nokia mobile devices worldwide.</div>
 </div>
 </article>
-
-        <article class="recognition-item">
+<article class="recognition-item">
 <div class="years">Judging</div>
 <div>
 <div class="recognition-title">Hackathon Judge — San Francisco</div>
@@ -682,16 +632,8 @@
 </div>
 </article>
 
-        <article class="recognition-item">
-<div class="years">PhoneClaw</div>
-<div>
-<div class="recognition-title">PhoneClaw AI — AI Platform Architect</div>
-<div class="recognition-desc">Architect and creator of PhoneClaw AI, an autonomous AI agent platform connecting thousands of integrations across messaging, productivity, and enterprise ecosystems. Designed to enable intelligent workflows, automation, and AI-powered task execution.</div>
-</div>
-</article>
-      </section>
-<section id="writing">
-<div class="section-label">Writing</div>
+</section><section id="writing">
+<div class="section-label">Technical Writing</div>
 <article class="work-item">
 <div class="years">Google · ML</div>
 <div>
@@ -708,32 +650,15 @@
 <a class="work-link" href="https://medium.com/ymedialabs-innovation/building-your-conversational-bot-with-go-and-api-ai-45bc5cb7ce5a" rel="noopener noreferrer" target="_blank">Read on Medium →</a>
 </div>
 </article>
-<article class="work-item">
-<div class="years">DevOps</div>
-<div>
-<div class="work-name">Applying Django Migrations to Kubernetes Cluster</div>
-<div class="work-desc">Published in Someshwara Innovation — engineering guide on managing database migrations in containerised environments.</div>
-<a class="work-link" href="https://medium.com/someshwara-innovation/applying-django-migrations-to-kubernetes-cluster-58fb6be4a76c" rel="noopener noreferrer" target="_blank">Read on Medium →</a>
-</div>
-</article>
-<article class="work-item">
-<div class="years">Go</div>
-<div>
-<div class="work-name">Golang JSON Additional Fields</div>
-<div class="work-desc">Technical deep-dive into handling JSON marshalling edge cases in Go.</div>
-<a class="work-link" href="https://medium.com/@darshansonde/golang-json-additional-fields-b01cb7e70b6b" rel="noopener noreferrer" target="_blank">Read on Medium →</a>
-</div>
-</article>
-</section>
-<section id="contact">
+
+
+</section><section id="contact">
 <div class="section-label">Contact</div>
 <div class="contact-box">
 <p>For speaking engagements, advisory opportunities, technology leadership discussions, strategic collaborations, and professional inquiries, reach out via email or LinkedIn.</p>
 <p><a href="mailto:darshan@sonde.in">darshan@sonde.in</a> · <a href="https://www.linkedin.com/in/darshansonde/" rel="noopener noreferrer" target="_blank">LinkedIn</a></p>
 </div>
-</section>
-<div class="footer">© 2026 Darshan Sonde · sonde.in</div>
-</main>
+</section><div class="footer">© 2026 Darshan Sonde · sonde.in</div></main>
 </div>
 </body>
 </html>
